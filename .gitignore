@@ -1,17 +1,45 @@
 # Godot 4+ specific ignores
 .godot/
-.nomedia
 
-# Godot-specific ignores
-.import/
-export.cfg
-export_credentials.cfg
+# Godot export directories
+/bin/
+/export/
+/export_presets.cfg
+
+# Godot metadata files (auto-generated imports)
+*.import
+
+# Android build
+/android/
+
+# OS specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# Build artifacts
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+
+# Temporary files
 *.tmp
-
-# Imported translations (automatically generated from CSV files)
-*.translation
-
-# Mono-specific ignores
-.mono/
-data_*/
-mono_crash.*.json
+*.bak
+*.swp
