@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://dvstq77v1lum"]
+
+[ext_resource type="PackedScene" uid="uid://bxnyj6btfs4vk" path="res://button.tscn" id="1_fnwad"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vl6sd"]
+bg_color = Color(0.18717614, 0.18717614, 0.18717614, 0.5686275)
+
+[node name="equipamiento" type="PanelContainer" unique_id=331878490]
+custom_minimum_size = Vector2(220, 0)
+theme_override_styles/panel = SubResource("StyleBoxFlat_vl6sd")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=597352724]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=693086450]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1152913084]
+layout_mode = 2
+text = "Equipamiento"
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/VBoxContainer/Label" unique_id=220899074]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 21.0
+offset_right = 196.0
+offset_bottom = 22.0
+
+[node name="ColorRect2" type="ColorRect" parent="MarginContainer/VBoxContainer/Label" unique_id=1940009485]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 23.0
+offset_right = 183.0
+offset_bottom = 24.0
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/Label" unique_id=1585856023]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -99.0
+offset_top = 25.0
+offset_right = 101.0
+offset_bottom = 31.0
+grow_horizontal = 2
+
+[node name="Casco" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=582601725]
+layout_mode = 2
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="Button" parent="MarginContainer/VBoxContainer/Casco" unique_id=1869561293 instance=ExtResource("1_fnwad")]
+layout_mode = 2
+
+[node name="Casco2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=472074492]
+layout_mode = 2
+theme_override_constants/separation = 13
+alignment = 1
+
+[node name="Button" parent="MarginContainer/VBoxContainer/Casco2" unique_id=853813417 instance=ExtResource("1_fnwad")]
+layout_mode = 2
+
+[node name="Button2" parent="MarginContainer/VBoxContainer/Casco2" unique_id=839541990 instance=ExtResource("1_fnwad")]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/Casco2" unique_id=857820782]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Casco3" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=701319311]
+layout_mode = 2
+alignment = 1
+
+[node name="Button" parent="MarginContainer/VBoxContainer/Casco3" unique_id=831647333 instance=ExtResource("1_fnwad")]
+layout_mode = 2
+
+[node name="Casco4" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1971414711]
+layout_mode = 2
+alignment = 1
+
+[node name="Button" parent="MarginContainer/VBoxContainer/Casco4" unique_id=1044312745 instance=ExtResource("1_fnwad")]
+layout_mode = 2
+
+[node name="Casco5" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=293000095]
+layout_mode = 2
+alignment = 1
+
+[node name="Button" parent="MarginContainer/VBoxContainer/Casco5" unique_id=108274530 instance=ExtResource("1_fnwad")]
+layout_mode = 2

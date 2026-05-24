@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ddpqfot4w73fm"]
+
+[node name="Casco" type="HBoxContainer" unique_id=1943162433]
+alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=352198328]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
