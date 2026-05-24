@@ -1,4 +1,3 @@
-#Guarda el estado actual
 extends State
 class_name PlayerState
 
