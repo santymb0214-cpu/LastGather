@@ -1,7 +1,15 @@
 [gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://4a1hxyomshxl"]
 
 [ext_resource type="Script" uid="uid://bdt0q7gc712rr" path="res://data/item_data.gd" id="1_2r8kq"]
+[ext_resource type="Texture2D" uid="uid://dsnuvdy36vmtk" path="res://basura arte/placeholders/ALP0430.png" id="1_qe6wc"]
 
 [resource]
 script = ExtResource("1_2r8kq")
+type = 1
+can_drop = true
+is_consumible = true
+item_icon = ExtResource("1_qe6wc")
+item_name = "Paracetamol"
+item_desc = "Cura 25 de vida"
+item_price = 200
 metadata/_custom_type_script = "uid://bdt0q7gc712rr"

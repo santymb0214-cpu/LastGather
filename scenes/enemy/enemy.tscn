@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://b7fa6fvqfudu4"]
 
-[ext_resource type="Script" uid="uid://d23y3dr4dj7jr" path="res://escenas/enemy/enemy.gd" id="1_yuea6"]
+[ext_resource type="Script" uid="uid://d23y3dr4dj7jr" path="res://scenes/enemy/enemy.gd" id="1_yuea6"]
 [ext_resource type="Texture2D" uid="uid://bkgxt045e3bh5" path="res://arte/Sprites/Actor/Characters/Shadow.png" id="2_vrfpl"]
 [ext_resource type="Texture2D" uid="uid://dd2va6jd6uhi0" path="res://arte/Sprites/Actor/Monsters/MouseBlack/SpriteSheet.png" id="3_l0o2c"]
 [ext_resource type="Texture2D" uid="uid://cvehldfa3vo1" path="res://arte/Sprites/Selector.png" id="4_agarx"]
-[ext_resource type="PackedScene" uid="uid://domq2a622vunl" path="res://escenas/components/health_component.tscn" id="5_8sgjv"]
+[ext_resource type="PackedScene" uid="uid://domq2a622vunl" path="res://scenes/components/health_component.tscn" id="5_8sgjv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pdf8v"]
 atlas = ExtResource("3_l0o2c")
