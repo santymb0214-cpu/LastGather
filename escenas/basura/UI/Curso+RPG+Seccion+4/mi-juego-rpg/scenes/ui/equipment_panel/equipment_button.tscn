@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://c5m2y7qwx0se2"]
+
+[ext_resource type="Script" uid="uid://btbi0l42s8lbe" path="res://scenes/ui/equipment_panel/equipment_button.gd" id="1_rk1uf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8rb31"]
+bg_color = Color(0.21960784, 0.23137255, 0.2901961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.45490196, 0.45490196, 0.45490196, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xla2n"]
+bg_color = Color(0.16644347, 0.17604062, 0.22411826, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.45490196, 0.45490196, 0.45490196, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1t84x"]
+bg_color = Color(0.29084164, 0.30530038, 0.37731123, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.45490196, 0.45490196, 0.45490196, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="EquipmentButton" type="Button" unique_id=48950597]
+custom_minimum_size = Vector2(40, 40)
+theme_override_styles/normal = SubResource("StyleBoxFlat_8rb31")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xla2n")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1t84x")
+script = ExtResource("1_rk1uf")
+
+[node name="ItemIcon" type="TextureRect" parent="." unique_id=1091823997]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

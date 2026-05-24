@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://c5gd1db3c3r7q"]
+
+[ext_resource type="Script" uid="uid://b8656xw35dilp" path="res://inventario.gd" id="1_bnejn"]
+[ext_resource type="Texture2D" uid="uid://dh8j3beujlajp" path="res://Sprites/Items/Food/Meat.png" id="2_r7ghh"]
+[ext_resource type="Texture2D" uid="uid://b25swkh2ytg3p" path="res://Sprites/Selector.png" id="3_bmj48"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oghek"]
+bg_color = Color(0.12225228, 0.12225222, 0.12225223, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_3nfo0"]
+font_size = 17
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+
+[node name="inventario" type="Button" unique_id=1421836306]
+custom_minimum_size = Vector2(50, 50)
+theme_override_styles/normal = SubResource("StyleBoxFlat_oghek")
+script = ExtResource("1_bnejn")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=683173415]
+visible = false
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_r7ghh")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="." unique_id=864446822]
+visible = false
+layout_mode = 0
+offset_left = 29.0
+offset_top = 28.0
+offset_right = 48.0
+offset_bottom = 51.0
+text = "64"
+label_settings = SubResource("LabelSettings_3nfo0")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=397816351]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -29.0
+offset_top = -29.0
+offset_right = 29.0
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_bmj48")

@@ -1,0 +1,143 @@
+[gd_scene format=3 uid="uid://clfy61gtp3wr7"]
+
+[ext_resource type="PackedScene" uid="uid://c5gd1db3c3r7q" path="res://inventario.tscn" id="1_ewau1"]
+[ext_resource type="Script" uid="uid://cfb6go1is775v" path="res://inventario_panel.gd" id="1_nom64"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vl6sd"]
+bg_color = Color(0.18717614, 0.18717614, 0.18717614, 0.5686275)
+
+[node name="PanelContainer" type="PanelContainer" unique_id=1124086437]
+custom_minimum_size = Vector2(220, 0)
+theme_override_styles/panel = SubResource("StyleBoxFlat_vl6sd")
+script = ExtResource("1_nom64")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=559655727]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=2140633213]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1017963116]
+layout_mode = 2
+text = "Inventario"
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/VBoxContainer/Label" unique_id=875925944]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 21.0
+offset_right = 219.0
+offset_bottom = 22.0
+
+[node name="ColorRect2" type="ColorRect" parent="MarginContainer/VBoxContainer/Label" unique_id=1470198852]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 23.0
+offset_right = 207.0
+offset_bottom = 24.0
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/Label/ColorRect2" unique_id=1770871952]
+custom_minimum_size = Vector2(0, 3)
+anchors_preset = 0
+offset_left = -35.0
+offset_top = 3.0
+offset_right = 185.0
+offset_bottom = 3.0
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer" unique_id=1138460084]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/h_separation = 6
+theme_override_constants/v_separation = 6
+columns = 5
+
+[node name="inventario" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1421836306 instance=ExtResource("1_ewau1")]
+layout_mode = 2
+
+[node name="inventario2" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=57665973 instance=ExtResource("1_ewau1")]
+layout_mode = 2
+
+[node name="inventario3" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=549345406 instance=ExtResource("1_ewau1")]
+layout_mode = 2
+
+[node name="inventario4" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=144683907 instance=ExtResource("1_ewau1")]
+layout_mode = 2
+
+[node name="inventario5" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1788432066 instance=ExtResource("1_ewau1")]
+layout_mode = 2
+
+[node name="inventario6" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=530074138 instance=ExtResource("1_ewau1")]
+layout_mode = 2
+
+[node name="inventario7" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1191578257 instance=ExtResource("1_ewau1")]
+layout_mode = 2
+
+[node name="inventario8" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1591540587 instance=ExtResource("1_ewau1")]
+layout_mode = 2
+
+[node name="inventario9" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1621850652 instance=ExtResource("1_ewau1")]
+layout_mode = 2
+
+[node name="inventario10" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=134744318 instance=ExtResource("1_ewau1")]
+layout_mode = 2
+
+[node name="inventario11" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1989921605 instance=ExtResource("1_ewau1")]
+layout_mode = 2
+
+[node name="inventario12" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=699986408 instance=ExtResource("1_ewau1")]
+layout_mode = 2
+
+[node name="inventario13" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=98163171 instance=ExtResource("1_ewau1")]
+layout_mode = 2
+
+[node name="inventario14" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1195305832 instance=ExtResource("1_ewau1")]
+layout_mode = 2
+
+[node name="inventario15" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=734648906 instance=ExtResource("1_ewau1")]
+layout_mode = 2
+
+[node name="inventario16" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1795837782 instance=ExtResource("1_ewau1")]
+layout_mode = 2
+
+[node name="inventario17" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1158413225 instance=ExtResource("1_ewau1")]
+layout_mode = 2
+
+[node name="inventario18" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=619936569 instance=ExtResource("1_ewau1")]
+layout_mode = 2
+
+[node name="inventario19" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1372382493 instance=ExtResource("1_ewau1")]
+layout_mode = 2
+
+[node name="inventario20" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=547123663 instance=ExtResource("1_ewau1")]
+layout_mode = 2
+
+[node name="inventario21" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1604031548 instance=ExtResource("1_ewau1")]
+layout_mode = 2
+
+[node name="inventario22" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=722149530 instance=ExtResource("1_ewau1")]
+layout_mode = 2
+
+[node name="inventario23" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=47227005 instance=ExtResource("1_ewau1")]
+layout_mode = 2
+
+[node name="inventario24" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=2131981206 instance=ExtResource("1_ewau1")]
+layout_mode = 2
+
+[node name="inventario25" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1314785848 instance=ExtResource("1_ewau1")]
+layout_mode = 2
+
+[node name="inventario26" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1791738157 instance=ExtResource("1_ewau1")]
+layout_mode = 2
+
+[node name="inventario27" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1164046687 instance=ExtResource("1_ewau1")]
+layout_mode = 2
+
+[node name="inventario28" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1198746467 instance=ExtResource("1_ewau1")]
+layout_mode = 2
+
+[node name="inventario29" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1932254394 instance=ExtResource("1_ewau1")]
+layout_mode = 2
+
+[node name="inventario30" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1381737110 instance=ExtResource("1_ewau1")]
+layout_mode = 2
