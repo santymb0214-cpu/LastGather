@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://ca0703iw1m8pp"]
+
+[ext_resource type="Texture2D" uid="uid://bweydwh8hi2hw" path="res://Sprites/Ui/Skill Icon/Meteo/Rain.png" id="1_xixp4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ncwhr"]
+font_size = 18
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[node name="SkillButton" type="Button" unique_id=1827591581]
+custom_minimum_size = Vector2(50, 50)
+flat = true
+
+[node name="Panel" type="Panel" parent="." unique_id=801874094]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SkillIcon" type="TextureRect" parent="." unique_id=696942828]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_xixp4")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="." unique_id=300191359]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -17.0
+offset_top = -27.0
+offset_right = -4.0
+offset_bottom = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "1"
+label_settings = SubResource("LabelSettings_ncwhr")
+horizontal_alignment = 1

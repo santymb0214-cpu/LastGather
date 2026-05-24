@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://0onaaovxer0f"]
+
+[ext_resource type="Script" uid="uid://wofkl1jry5sh" path="res://scenes/ui/equipment_panel/equipment_panel.gd" id="1_tj77f"]
+[ext_resource type="PackedScene" uid="uid://c5m2y7qwx0se2" path="res://scenes/ui/equipment_panel/equipment_button.tscn" id="1_ygh2l"]
+[ext_resource type="Texture2D" uid="uid://b5oevb1lcm4j7" path="res://Sprites/Items/Weapons/Katana/Sprite.png" id="2_tj77f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x0gri"]
+bg_color = Color(0.14901961, 0.16470589, 0.20784314, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_color = Color(0.08009692, 0.09058393, 0.11943998, 1)
+shadow_size = 1
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2lnfa"]
+font_size = 18
+
+[node name="EquipmentPanel" type="PanelContainer" unique_id=2020322430]
+custom_minimum_size = Vector2(215, 0)
+theme_override_styles/panel = SubResource("StyleBoxFlat_x0gri")
+script = ExtResource("1_tj77f")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=202472650]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1504512514]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=200405840]
+layout_mode = 2
+text = "Equipment"
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/VBoxContainer" unique_id=1885586579]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+color = Color(0.25490198, 0.28235295, 0.34509805, 1)
+
+[node name="Space" type="Control" parent="MarginContainer/VBoxContainer" unique_id=1605972008]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=293923261]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Helmet" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBox" unique_id=1297595097]
+layout_mode = 2
+alignment = 1
+
+[node name="EquipmentButton" parent="MarginContainer/VBoxContainer/VBox/Helmet" unique_id=48950597 instance=ExtResource("1_ygh2l")]
+layout_mode = 2
+
+[node name="Body" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBox" unique_id=1178003117]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="EquipmentButton" parent="MarginContainer/VBoxContainer/VBox/Body" unique_id=1013481819 instance=ExtResource("1_ygh2l")]
+layout_mode = 2
+
+[node name="EquipmentButton2" parent="MarginContainer/VBoxContainer/VBox/Body" unique_id=13837926 instance=ExtResource("1_ygh2l")]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/VBox/Body" unique_id=1947537576]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Pants" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBox" unique_id=585014459]
+layout_mode = 2
+alignment = 1
+
+[node name="EquipmentButton" parent="MarginContainer/VBoxContainer/VBox/Pants" unique_id=87428637 instance=ExtResource("1_ygh2l")]
+layout_mode = 2
+
+[node name="Ring" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBox" unique_id=1400856972]
+layout_mode = 2
+alignment = 1
+
+[node name="EquipmentButton" parent="MarginContainer/VBoxContainer/VBox/Ring" unique_id=743219035 instance=ExtResource("1_ygh2l")]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1908005192]
+layout_mode = 2
+size_flags_vertical = 10
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=764531494]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+texture = ExtResource("2_tj77f")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="DamageAmount" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=868898232]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_2lnfa")

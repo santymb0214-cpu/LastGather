@@ -1,0 +1,495 @@
+[gd_scene format=3 uid="uid://dvnr1hydenewr"]
+
+[ext_resource type="Texture2D" uid="uid://bond1jiryf5xx" path="res://Sprites/Items/Tool/Pickaxe.png" id="1_nki3b"]
+[ext_resource type="Texture2D" uid="uid://b03hqs4avmaku" path="res://Sprites/Items/Tool/Anvil.png" id="2_tkreh"]
+[ext_resource type="Texture2D" uid="uid://gjnokcseymfk" path="res://Sprites/Items/Object/Bag.png" id="3_525j1"]
+[ext_resource type="Texture2D" uid="uid://cu05ejw5i6gt8" path="res://Sprites/Ui/Theme/Wip/ThemeMap/nine_path_panel.png" id="4_xtgmq"]
+[ext_resource type="Texture2D" uid="uid://xyak03jnq3mj" path="res://Sprites/Rune.png" id="5_fi1dd"]
+[ext_resource type="PackedScene" uid="uid://ca0703iw1m8pp" path="res://skill_button.tscn" id="6_oghek"]
+[ext_resource type="PackedScene" uid="uid://clfy61gtp3wr7" path="res://Inventario_panel.tscn" id="6_tkreh"]
+[ext_resource type="Script" uid="uid://bdds466ys0gix" path="res://skill_button.gd" id="7_mqebe"]
+[ext_resource type="PackedScene" uid="uid://dvstq77v1lum" path="res://equipamiento.tscn" id="9_kjw1v"]
+[ext_resource type="Script" uid="uid://duhj3ei2tkjn1" path="res://equipamiento.gd" id="10_gttat"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oghek"]
+bg_color = Color(0.12225228, 0.12225222, 0.12225223, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mqebe"]
+bg_color = Color(0.12156863, 0.12156863, 0.12156863, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kjw1v"]
+bg_color = Color(0.12156863, 0.12156863, 0.12156863, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_civ0g"]
+bg_color = Color(0.12156863, 0.12156863, 0.12156863, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 2
+
+[node name="Town" type="Node2D" unique_id=1861429845]
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=2132588074]
+
+[node name="PrincipalButton" type="Panel" parent="HUD" unique_id=1017361660]
+custom_minimum_size = Vector2(264, 66)
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -292.0
+offset_top = -94.0
+offset_right = -28.0
+offset_bottom = -28.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="HUD/PrincipalButton" unique_id=860203160]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 21.0
+offset_right = -19.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD/PrincipalButton/MarginContainer" unique_id=862908540]
+layout_mode = 2
+
+[node name="Equipamiento" type="Button" parent="HUD/PrincipalButton/MarginContainer/HBoxContainer" unique_id=1533528893]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_oghek")
+
+[node name="TextureRect" type="TextureRect" parent="HUD/PrincipalButton/MarginContainer/HBoxContainer/Equipamiento" unique_id=162560448]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_nki3b")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="Construccion" type="Button" parent="HUD/PrincipalButton/MarginContainer/HBoxContainer" unique_id=121177936]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_mqebe")
+
+[node name="TextureRect" type="TextureRect" parent="HUD/PrincipalButton/MarginContainer/HBoxContainer/Construccion" unique_id=90167745]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_tkreh")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="Inventario" type="Button" parent="HUD/PrincipalButton/MarginContainer/HBoxContainer" unique_id=1297176903]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_kjw1v")
+
+[node name="TextureRect" type="TextureRect" parent="HUD/PrincipalButton/MarginContainer/HBoxContainer/Inventario" unique_id=403534266]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_525j1")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="Arbol de habilidades" type="Button" parent="HUD/PrincipalButton/MarginContainer/HBoxContainer" unique_id=1394213519]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_civ0g")
+
+[node name="TextureRect" type="TextureRect" parent="HUD/PrincipalButton/MarginContainer/HBoxContainer/Arbol de habilidades" unique_id=1037780582]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_fi1dd")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD/PrincipalButton/MarginContainer" unique_id=1133590850]
+visible = false
+layout_mode = 2
+
+[node name="Equipamiento" type="Button" parent="HUD/PrincipalButton/MarginContainer/VBoxContainer" unique_id=2024684785]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_oghek")
+
+[node name="TextureRect" type="TextureRect" parent="HUD/PrincipalButton/MarginContainer/VBoxContainer/Equipamiento" unique_id=87951454]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_nki3b")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="Construccion" type="Button" parent="HUD/PrincipalButton/MarginContainer/VBoxContainer" unique_id=1026456785]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HUD/PrincipalButton/MarginContainer/VBoxContainer/Construccion" unique_id=752805171]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_tkreh")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="Inventario" type="Button" parent="HUD/PrincipalButton/MarginContainer/VBoxContainer" unique_id=1793405815]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HUD/PrincipalButton/MarginContainer/VBoxContainer/Inventario" unique_id=838055153]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_525j1")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="Terreno" type="Button" parent="HUD/PrincipalButton/MarginContainer/VBoxContainer" unique_id=920508891]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HUD/PrincipalButton/MarginContainer/VBoxContainer/Terreno" unique_id=1199155283]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_xtgmq")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="Arbol de habilidades" type="Button" parent="HUD/PrincipalButton/MarginContainer/VBoxContainer" unique_id=558169802]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HUD/PrincipalButton/MarginContainer/VBoxContainer/Arbol de habilidades" unique_id=1976848189]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_fi1dd")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="Barra" type="Panel" parent="HUD" unique_id=1584048186]
+custom_minimum_size = Vector2(264, 66)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -205.0
+offset_top = -101.0
+offset_right = 59.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="HUD/Barra" unique_id=837740378]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -5.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 19
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD/Barra/MarginContainer" unique_id=705085603]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="SkillButton" parent="HUD/Barra/MarginContainer/HBoxContainer" unique_id=1827591581 instance=ExtResource("6_oghek")]
+layout_mode = 2
+script = ExtResource("7_mqebe")
+number = 1
+
+[node name="SkillButton2" parent="HUD/Barra/MarginContainer/HBoxContainer" unique_id=1870609315 instance=ExtResource("6_oghek")]
+layout_mode = 2
+script = ExtResource("7_mqebe")
+number = 2
+
+[node name="SkillButton3" parent="HUD/Barra/MarginContainer/HBoxContainer" unique_id=74772977 instance=ExtResource("6_oghek")]
+layout_mode = 2
+script = ExtResource("7_mqebe")
+number = 3
+
+[node name="SkillButton4" parent="HUD/Barra/MarginContainer/HBoxContainer" unique_id=1934036091 instance=ExtResource("6_oghek")]
+layout_mode = 2
+script = ExtResource("7_mqebe")
+number = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD/Barra/MarginContainer" unique_id=1511995612]
+visible = false
+layout_mode = 2
+
+[node name="Equipamiento" type="Button" parent="HUD/Barra/MarginContainer/VBoxContainer" unique_id=931321737]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_oghek")
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Barra/MarginContainer/VBoxContainer/Equipamiento" unique_id=463124074]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_nki3b")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="Construccion" type="Button" parent="HUD/Barra/MarginContainer/VBoxContainer" unique_id=1091548265]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Barra/MarginContainer/VBoxContainer/Construccion" unique_id=2093763660]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_tkreh")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="Inventario" type="Button" parent="HUD/Barra/MarginContainer/VBoxContainer" unique_id=1080801350]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Barra/MarginContainer/VBoxContainer/Inventario" unique_id=459360564]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_525j1")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="Terreno" type="Button" parent="HUD/Barra/MarginContainer/VBoxContainer" unique_id=556702724]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Barra/MarginContainer/VBoxContainer/Terreno" unique_id=1869597001]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_xtgmq")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="Arbol de habilidades" type="Button" parent="HUD/Barra/MarginContainer/VBoxContainer" unique_id=284421707]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HUD/Barra/MarginContainer/VBoxContainer/Arbol de habilidades" unique_id=1975830467]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_fi1dd")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD" unique_id=1953559937]
+custom_minimum_size = Vector2(442, 270)
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -512.0
+offset_top = -458.0
+offset_right = -14.0
+offset_bottom = -101.0
+grow_horizontal = 0
+grow_vertical = 0
+alignment = 2
+
+[node name="Inventario_Panel" parent="HUD/HBoxContainer" unique_id=1124086437 instance=ExtResource("6_tkreh")]
+layout_mode = 2
+
+[node name="Equipamiento_Panel" parent="HUD/HBoxContainer" unique_id=331878490 instance=ExtResource("9_kjw1v")]
+layout_mode = 2
+script = ExtResource("10_gttat")
