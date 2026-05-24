@@ -1,3 +1,4 @@
+#cambia al estado de estar quieto
 extends PlayerState
 class_name PlayerStateIdle
 

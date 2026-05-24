@@ -1,12 +1,19 @@
+#Todo lo relacionado al player
 extends CharacterBody2D
 class_name Player
 
+@export_group("Stats")
 @export var max_health: float = 10.0
 @export var max_mana: float = 10.0
 @export var move_speed: float = 67.0
 @export var damage: float = 10.0
 @export var crit_chance: float = 10.0
 @export var crit_damage: float = 10.0
+
+@export_group("Exp")
+@export var base_exp: float = 100.0
+@export var exp_mul: float = 1.25
+
 
 @onready var anim_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var health_component: Node = $HealthComponent
@@ -25,18 +32,37 @@ class_name Player
 }
 
 var curr_mana: float = 0.0
+var curr_exp: float = 0.0
+var next_lvl_exp: float = 0.0
 
-
+var curr_lvl: int = 1
+#Arbol de habilidades 
+var curr_points: int = 0 
 
 var last_direction: String = "down"
 
 func _process(delta: float) -> void:
 	fsm.current_state.process_state(delta)
 
+func setup() -> void:
+	reset_health()
+	reset_mana()
 
 func reset_health() -> void:
 	health_component.setup(max_health)
+	EventBus.on_player_health_updated.emit(max_health, max_health)
+	
+func reset_mana() -> void:
+	curr_mana = max_mana
+	EventBus.on_player_health_updated.emit(max_mana, max_mana)
 
+func use_mana(value:float) -> void:
+	curr_mana = max(curr_mana - value, 0)
+	EventBus.on_player_health_updated.emit(max_mana, max_mana)
+	
+func add_exp(value: float) -> void:
+	curr_exp += value
+	
 
 func is_moving() -> bool:
 	var move_input = ["move_up","move_down","move_right","move_left"]

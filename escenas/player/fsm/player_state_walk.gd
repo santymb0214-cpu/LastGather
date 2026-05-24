@@ -1,3 +1,4 @@
+#Cambia a caminar
 extends PlayerState
 class_name PlayerStateWalk
 

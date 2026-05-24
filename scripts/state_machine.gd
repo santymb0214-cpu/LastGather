@@ -1,3 +1,4 @@
+#revisa los estados
 extends Node
 class_name FSM
 

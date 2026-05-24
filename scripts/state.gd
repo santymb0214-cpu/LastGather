@@ -1,3 +1,4 @@
+#revisa constantemente el estado del jugado
 extends Node
 class_name State
 

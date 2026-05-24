@@ -1,3 +1,4 @@
+#cambia al estado de ataque
 extends PlayerState
 class_name PlayerStateAttack
 
