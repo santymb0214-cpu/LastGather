@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://djfbbi3sq0k85"]
+
+[ext_resource type="Script" uid="uid://bwt7btr4qs644" path="res://data/skills/skill_data.gd" id="1_ygywb"]
+
+[resource]
+script = ExtResource("1_ygywb")
+mana_cost = 2.0
+base_dmg = 5.0
+metadata/_custom_type_script = "uid://bwt7btr4qs644"

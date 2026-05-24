@@ -2,6 +2,7 @@
 extends PlayerState
 class_name PlayerStateAttack
 
+
 const WEAPON_ROTATION: Dictionary = {
 	"down": 180.0,
 	"up": 0.0,
@@ -9,14 +10,17 @@ const WEAPON_ROTATION: Dictionary = {
 	"right": 90.0
 }
 
+
 func enter_state() -> void:
 	player.play_direction_animation("attack")
 	position_weapon()
 	player.anim_sprite.animation_finished.connect(_animation_finished)
 
+
 func exit_state() -> void:
 	if player.anim_sprite.animation_finished.is_connected(_animation_finished):
 		player.anim_sprite.animation_finished.disconnect(_animation_finished)
+
 
 func position_weapon() -> void:
 	var direction_key: String = player.last_direction
