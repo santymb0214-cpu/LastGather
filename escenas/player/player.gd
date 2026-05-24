@@ -47,6 +47,7 @@ func _process(delta: float) -> void:
 func setup() -> void:
 	reset_health()
 	reset_mana()
+	next_lvl_exp = base_exp
 
 func reset_health() -> void:
 	health_component.setup(max_health)
@@ -62,6 +63,18 @@ func use_mana(value:float) -> void:
 	
 func add_exp(value: float) -> void:
 	curr_exp += value
+	while curr_exp >= next_lvl_exp:
+		lvl_up()
+		
+	EventBus.on_player_new_level.emit(curr_exp,next_lvl_exp)
+
+func lvl_up() -> void:
+	curr_exp -= next_lvl_exp
+	curr_lvl += 1
+	curr_points += 4
+	next_lvl_exp *= exp_mul
+	EventBus.on_player_stats_updated.emit()
+	pass
 	
 
 func is_moving() -> bool:
